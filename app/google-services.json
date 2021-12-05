@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "775681478282",
+    "project_id": "blagam-75c70",
+    "storage_bucket": "blagam-75c70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775681478282:android:cecfc6df98670bdda0e773",
+        "android_client_info": {
+          "package_name": "com.example.icraveviolence"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775681478282-spqoe9igmphi06f8c6vpqs18ittcsu49.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCdOjsK7__reoUsdcd66DgLH4fwe5WhxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775681478282-spqoe9igmphi06f8c6vpqs18ittcsu49.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

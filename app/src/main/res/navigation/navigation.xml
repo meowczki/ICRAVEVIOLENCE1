@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.icraveviolence.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.icraveviolence.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_registrationFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/balancedSupplementsFragment"
+        android:name="com.example.icraveviolence.BalancedSupplementsFragment"
+        android:label="fragment_balanced"
+        tools:layout="@layout/fragment_balanced" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.icraveviolence.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/meatFragment"
+        android:name="com.example.icraveviolence.MeatFragment"
+        android:label="fragment_meat"
+        tools:layout="@layout/fragment_meat">
+        <action
+            android:id="@+id/action_MeatFragment_to_BalancedSupplementsFragment"
+            app:destination="@id/balancedSupplementsFragment">
+            <argument
+                android:name="balanced_supplements_id"
+                android:defaultValue="0"
+                app:argType="integer" />
+        </action>
+
+    </fragment>
+
+
+</navigation>
