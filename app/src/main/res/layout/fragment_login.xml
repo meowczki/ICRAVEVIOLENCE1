@@ -39,6 +39,14 @@
         android:layout_marginBottom="20dp"
         android:text="Login"
         android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btn_demo"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="demo"
+        android:textAllCaps="false" />
 
     <ProgressBar
         android:id="@+id/progressbar"

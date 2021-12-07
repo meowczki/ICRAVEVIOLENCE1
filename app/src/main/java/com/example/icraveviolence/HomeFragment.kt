@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.NavHostFragment
 import com.example.icraveviolence.databinding.FragmentHomeBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -20,10 +21,14 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.bind(inflater.inflate(R.layout.fragment_home, container, false))
         val view = binding.root
 
-        mAuth = FirebaseAuth.getInstance();
+       // mAuth = FirebaseAuth.getInstance();
 
-        binding.tvEmail.text = mAuth.currentUser!!.email
+//        binding.tvEmail.text = mAuth.currentUser!!.email
+        binding.start.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeFragmentToMultiFragment()
+            NavHostFragment.findNavController(requireParentFragment()).navigate(action)
 
+        }
         return view;
     }
 }

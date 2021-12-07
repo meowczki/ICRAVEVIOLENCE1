@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.navigation.fragment.NavHostFragment
 import com.example.icraveviolence.databinding.FragmentRegistrationBinding
@@ -19,6 +20,7 @@ class RegistrationFragment : Fragment() {
 // generated for each XML layout file that the module contains.
     private lateinit var binding: FragmentRegistrationBinding;
     private lateinit var mAuth: FirebaseAuth;
+    private lateinit var progressBar: ProgressBar;
     private lateinit var reference: DatabaseReference;
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -29,7 +31,7 @@ class RegistrationFragment : Fragment() {
 
         mAuth = FirebaseAuth.getInstance();
         reference = FirebaseDatabase.getInstance().reference.child("Users");
-
+        progressBar = binding.progressbar;
         binding.btnReg.setOnClickListener {
             register()
         }
@@ -47,6 +49,7 @@ class RegistrationFragment : Fragment() {
         } else {
             val name = "$fname $lname";
             // dodaj enable auth w konsoli
+            progressBar.visibility = View.VISIBLE
             mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task->
                     if (task.isSuccessful) {

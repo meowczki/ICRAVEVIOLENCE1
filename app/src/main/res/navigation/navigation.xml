@@ -32,29 +32,23 @@
             app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
     </fragment>
-    <fragment
-        android:id="@+id/balancedSupplementsFragment"
-        android:name="com.example.icraveviolence.BalancedSupplementsFragment"
-        android:label="fragment_balanced"
-        tools:layout="@layout/fragment_balanced" />
 
+    <fragment
+        android:id="@+id/multiFragment"
+        android:name="com.example.icraveviolence.MultiFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_multi" >
+
+
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.icraveviolence.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/meatFragment"
-        android:name="com.example.icraveviolence.MeatFragment"
-        android:label="fragment_meat"
-        tools:layout="@layout/fragment_meat">
+        tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_MeatFragment_to_BalancedSupplementsFragment"
-            app:destination="@id/balancedSupplementsFragment">
-            <argument
-                android:name="balanced_supplements_id"
-                android:defaultValue="0"
-                app:argType="integer" />
+            android:id="@+id/action_HomeFragment_to_MultiFragment"
+            app:destination="@id/multiFragment">
         </action>
 
     </fragment>

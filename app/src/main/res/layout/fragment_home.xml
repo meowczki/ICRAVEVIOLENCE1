@@ -14,5 +14,21 @@
         android:text="email"
         android:textSize="20dp"
         android:id="@+id/tv_email"/>
+    <Button
+        android:id="@+id/start"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="start recipe"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/add_own_product"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="add my product"
+        android:textAllCaps="false" />
 
 </LinearLayout>

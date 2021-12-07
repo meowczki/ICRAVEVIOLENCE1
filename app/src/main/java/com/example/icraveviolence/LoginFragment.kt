@@ -30,6 +30,10 @@ class LoginFragment : Fragment() {
         binding.btn.setOnClickListener {
             login()
         }
+        binding.btnDemo.setOnClickListener {
+            val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment();
+            NavHostFragment.findNavController(requireParentFragment()).navigate(action);
+        }
 
         progressBar = binding.progressbar;
 
